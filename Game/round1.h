@@ -3,7 +3,6 @@
 class Round1 {
 
 private:
-	int score;
 	string suspectName;
 
 public:

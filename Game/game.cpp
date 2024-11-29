@@ -4,7 +4,6 @@ using namespace std;
 #include "suspect.h"
 #include "game.h"
 #include "round1.h"
-#include "round2.h"
 
 Round1 round1;
 Suspect suspect;
