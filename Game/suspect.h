@@ -19,6 +19,5 @@ public:
     void behaviour();
     void suspectInfo();
 
-
 };
 

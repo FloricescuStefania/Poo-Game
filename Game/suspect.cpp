@@ -8,11 +8,6 @@ Suspect::Suspect(string name, int age, string relation)
     this->age = age;
     this->relation = relation;
 }
- 
-void Suspect::print() 
-{
-    cout << "Name: " << name <<" , "<< "Age: " << age <<" , " << "Relation with the victim: "<< relation << endl;
-}
 
 void Suspect::behaviour() {
     cout << "John keeps looking at the door." << endl;
@@ -28,5 +23,15 @@ void Suspect::suspectInfo() {
     suspect1.print();
     suspect2.print();
     suspect3.print();
+
+    cout << "A good choice.You need to know information about the suspects in this case." << endl;
+    
+    //TO DO-add score
    
 }
+
+void Suspect::print()
+{
+    cout << "Name: " << name << " , " << "Age: " << age << " , " << "Relation with the victim: " << relation << endl;
+}
+
