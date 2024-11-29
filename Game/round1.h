@@ -1,5 +1,6 @@
 #pragma once
 
+
 class Round1 {
 
 private:
@@ -9,4 +10,5 @@ public:
 	void begin();
 	void interrogate();
 	void riskyChoice();
+	void trySomethingElse();
  };
