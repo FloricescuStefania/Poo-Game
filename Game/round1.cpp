@@ -23,7 +23,7 @@ void Round1::begin() {
         cout << "\nYou choose Paul" << endl;
     else
         cout << "Invalid name!" << endl;
-     
+     //TO DO daca este ivalid name atunci sa iasa din joc sau sa mearga in meniul principal
 }
 
 void Round1::interrogate()
@@ -31,7 +31,7 @@ void Round1::interrogate()
     
     begin();
 
-    cout << "What do you want to ask first? (1-3)" << endl;
+    cout << "What do you want to ask "<< suspectName<< " " << "first ? (1 - 3)" << endl;
     cout << "1.Where were you at the time of the crime?" << endl;
     cout << "2.Did you speak to the victim on the day of the murder?" << endl;
     cout << "3.Did you have a close relationship with the victim?" << endl;
@@ -41,7 +41,7 @@ void Round1::interrogate()
     switch (question)
     {
     case 1:
-        if (suspectName == "Paul" || suspectName=="paul")
+        if (suspectName == "Paul" || suspectName == "paul")
             cout << "I was home all night, watching a movie. You can check the security cameras in my building." << endl;
         else if (suspectName == "John" || suspectName == "john")
             cout << "I was out with some friends. I think I was somewhere around town." << endl;
