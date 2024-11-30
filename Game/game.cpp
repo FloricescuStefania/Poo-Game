@@ -4,9 +4,11 @@ using namespace std;
 #include "suspect.h"
 #include "game.h"
 #include "round1.h"
+#include "inspecthouse.h"
 
 Round1 round1;
 Suspect suspect;
+InspectHouse inspecthouse;
 
 void Game::start() {
         running = true;
@@ -25,7 +27,8 @@ void Game::start() {
             case 1: suspect.suspectInfo(); break;
             case 2: round1.interrogate(); break;
             case 3: round1.riskyChoice(); break;
-            case 4:  break;
+            case 4: inspecthouse.chooseRoom();  break;//TO DO-class to inspect the house
+            case 5: break;//TO DO-method to exit the game
             default: cout << "Invalid choice.\n"; break;
             }
         }

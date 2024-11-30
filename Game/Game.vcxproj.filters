@@ -30,10 +30,10 @@
     <ClCompile Include="game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="round2.cpp">
+    <ClCompile Include="round1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="round1.cpp">
+    <ClCompile Include="inspecthouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,10 +44,10 @@
     <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="round2.h">
+    <ClInclude Include="round1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="round1.h">
+    <ClInclude Include="inspecthouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

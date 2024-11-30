@@ -9,7 +9,7 @@ Game game;
 
 void Round1::begin() {
 
-    cout << "Who do you want to interrogate?" << endl;
+    cout << "Who do you want to interrogate?Please enter the name:" << endl;
     cout << "John" << endl;
     cout << "Bob" << endl;
     cout << "Paul" << endl;
@@ -81,9 +81,11 @@ void Round1::interrogate()
 }
 
 void Round1::trySomethingElse() {
-    cout << "What do you want to do now?" << endl;
-    cout << "Ask something else" << endl;
-    cout << "Return to main menu" << endl;
+    cout << "What do you want to do now?(1-2)" << endl;
+    cout << "1.Ask something else" << endl;
+    cout << "2.Return to main menu" << endl;
+  /*cout << "3.Leave the game" << endl;
+    cout << "4.Take a guess about the suspect" << endl;*/
     int another;
     cin >> another;
 
@@ -106,12 +108,14 @@ void Round1::riskyChoice() {
         cin >> riskyChoice;
 
         if (riskyChoice == 1) {
-            cout << "You decide to confront the suspect directly about his alibi.\n";
-            
-            cout << "The suspect gets defensive and refuses to talk more.\n";
+            cout << "You are so brave!You decide to confront the suspect directly.";
+            cout<< "But now you scared the suspect and he gets defensive and refuses to talk more. " << endl;
+            //TO DO- scade scorul si iese din joc
+           
         }
         else if (riskyChoice == 2) {
-            cout << "You choose to gather more information before making accusations.\n";
+            cout << "A wise choice!You choose to gather more information before making accusations.\n";
+            //TO DO- creste scorul si continua jocul
         }
         else {
             cout << "Invalid choice.\n";
