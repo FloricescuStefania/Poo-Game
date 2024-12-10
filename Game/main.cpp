@@ -14,3 +14,4 @@ int main() {
     cout << "Thanks for playing!" << endl;
     return 0;
 }
+// trebuie citite din fisier pt ca sunt hardcodate si daca vreau sa modific ceva trebuie modficiat mult din cod

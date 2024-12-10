@@ -36,6 +36,9 @@
     <ClCompile Include="inspecthouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="filehandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="player.h">
@@ -50,5 +53,17 @@
     <ClInclude Include="inspecthouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="filehandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="questions.txt" />
+    <Text Include="rooms.txt" />
+    <Text Include="suspect_info.txt" />
+    <Text Include="suspect_behaviour.txt" />
+    <Text Include="suspect1-responses.txt" />
+    <Text Include="suspect2-responses.txt" />
+    <Text Include="suspect3-responses.txt" />
   </ItemGroup>
 </Project>

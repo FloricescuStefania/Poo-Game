@@ -1,87 +1,66 @@
-#include <string>
+ï»¿#include <string>
 #include <iostream>
+#include <fstream>
 using namespace std;
 #include "round1.h"
 #include "suspect.h"
 #include "game.h"
+#include "filehandler.h"
 
 Game game;
+FileHandler fileinfo;
 
 void Round1::begin() {
 
-    cout << "Who do you want to interrogate?Please enter the name:" << endl;
-    cout << "John" << endl;
-    cout << "Bob" << endl;
-    cout << "Paul" << endl;
+    cout << "\nWho do you want to interrogate?(1-3):\n" << endl;
+    fileinfo.suspects_info();
 
-    cin.ignore();
-    getline(cin, suspectName);
+    int person;
+    cin >> person;
 
-    if (suspectName == "Bob" || suspectName == "bob")
-        cout << "\nYou choose Bob" << endl;
-    else if (suspectName == "John" || suspectName == "john")
-        cout << "\nYou choose John" << endl;
-    else if (suspectName == "Paul" || suspectName == "paul")
-        cout << "\nYou choose Paul" << endl;
-    else{
+        switch (person) {
+           case 1: cout << "You chose John" << endl; selectedSuspectFile = "suspect1-responses.txt"; break;
+           case 2: cout << "You chose Bob" << endl; selectedSuspectFile = "suspect2-responses.txt";  break;
+           case 3: cout << "You chose Paul" << endl; selectedSuspectFile = "suspect3-responses.txt";  break;
+           default:
         cout << "Invalid name!Returning to the main menu...\n" << endl;
        game.start();
+       break;
 }
     
 }
 
 void Round1::interrogate()
 {
-    
     begin();
-   
-    cout << "What do you want to ask "<< suspectName<< " " << "first ? (1 - 3)" << endl;
-    cout << "1.Where were you at the time of the crime?" << endl;
-    cout << "2.Did you speak to the victim on the day of the murder?" << endl;
-    cout << "3.Did you have a close relationship with the victim?" << endl;
+
+    cout << "\nWhat do you want to ask? (1-3):\n" << endl;
+    fileinfo.questionFile();
+
     int question;
     cin >> question;
 
-    switch (question)
-    {
+    switch (question) {
     case 1:
-        if (suspectName == "Paul" || suspectName == "paul")
-            cout << "I was home all night, watching a movie. You can check the security cameras in my building." << endl;
-        else if (suspectName == "John" || suspectName == "john")
-            cout << "I was out with some friends. I think I was somewhere around town." << endl;
-        else if (suspectName == "Bob" || suspectName == "bob")
-            cout << "I was at an important meeting... I didn’t have time to think about anything else." << endl;
+        fileinfo.getSuspectResponse(selectedSuspectFile, 1);  // Question 1
         trySomethingElse();
         break;
-
     case 2:
-        if (suspectName == "Paul" || suspectName == "paul")
-            cout << "I sent a quick message, but didn’t get a reply. It wasn’t anything serious." << endl;
-        else if (suspectName == "John" || suspectName == "john")
-            cout << "No, I hadn’t spoken with Nicholas in a few weeks." << endl;
-        else if (suspectName == "Bob" || suspectName == "bob")
-            cout << "No, I was actually surprised to hear he was in town that day." << endl;
+        fileinfo.getSuspectResponse(selectedSuspectFile, 2);  // Question 2
         trySomethingElse();
         break;
-
     case 3:
-        if (suspectName == "Paul" || suspectName == "paul")
-            cout << "He was my neighbor. I still can’t believe this happened." << endl;
-        else if (suspectName == "John" || suspectName == "john")
-            cout << "Not really. We only met a few times through mutual friends." << endl;
-        else if (suspectName == "Bob" || suspectName == "bob")
-            cout << "We got along well at work, but we didn’t really talk outside of that." << endl;
+        fileinfo.getSuspectResponse(selectedSuspectFile, 3);  // Question 3
         trySomethingElse();
         break;
-
     default:
-        cout << "Invalid choice." << endl;
+        cout << "Invalid choice!" << endl;
         break;
     }
 }
 
 void Round1::trySomethingElse() {
-    cout << "What do you want to do now?(1-2)" << endl;
+    cout << "\nWhat do you want to do now?(1-2):\n" << endl;
     cout << "1.Ask something else" << endl;
     cout << "2.Return to main menu" << endl;
   /*cout << "3.Leave the game" << endl;

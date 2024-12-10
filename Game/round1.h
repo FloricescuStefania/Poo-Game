@@ -1,10 +1,9 @@
 #pragma once
 
-
 class Round1 {
 
 private:
-	string suspectName;
+	string selectedSuspectFile;
 
 public:
 	void begin();

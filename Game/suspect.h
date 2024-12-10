@@ -13,11 +13,9 @@ private:
     string relation;
 
 public:
-    Suspect();
+    //Suspect();
     Suspect(string name, int age, string relation);
-    void print() ; 
-    void behaviour();
-    void suspectInfo();
+    void print() const; 
 
 };
 

@@ -1,0 +1,6 @@
+1.kitchen
+2.living room
+3.bedroom
+4.bathroom
+5.garage
+6.garden

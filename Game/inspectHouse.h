@@ -17,8 +17,6 @@ private:
     vector<Room> rooms;//the list of the rooms
 public:
     //Round2(const string& clueName = "", const string& description = "");
-    InspectHouse();
-    void displayRooms()const;
-    void chooseRoom();
+    void choseRoom();
 
 };

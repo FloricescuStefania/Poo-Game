@@ -1,0 +1,5 @@
+
+ 
+    cout << "1.Where were you at the time of the crime?" << endl;
+    cout << "2.Did you speak to the victim on the day of the murder?" << endl;
+    cout << "3.Did you have a close relationship with the victim?" << endl;
