@@ -1,7 +1,6 @@
 #pragma once
 
 #include <fstream>
-#include "score.h"
 using namespace std;
 
  class FileHandler {
@@ -10,7 +9,6 @@ private:
 	string fileName;
 
 public:
-	//FileHandler();
 	void suspectBehaviour();
 	void questionFile();
     void roomList();

@@ -21,9 +21,6 @@
     <ClCompile Include="suspect.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="suspect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,6 +40,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="clue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="suspect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

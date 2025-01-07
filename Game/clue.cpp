@@ -1,7 +1,4 @@
 #include "clue.h"
-#include "findclues.h"
-
-FindClues inspect;
 
 int Clue:: getClue() const {
     return clue;
@@ -9,4 +6,8 @@ int Clue:: getClue() const {
 
 void Clue::setClue(const int& newClue) {
     clue = newClue;
+}
+
+void Clue::addClue(const string& clues) {
+    cluename.push_back(clues);
 }

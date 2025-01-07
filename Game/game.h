@@ -1,7 +1,4 @@
 #pragma once
-//#include "filehandler.h"
-#include <iostream>
-using namespace std;
 
 class Game {
 private :

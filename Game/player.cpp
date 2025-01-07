@@ -1,11 +1,7 @@
 ﻿#include "player.h"
-#include "game.h"
-#include "score.h"
 #include <iostream>
 
-Game playergame;
 //constructor that provide information about the player
-
 Player::Player() 
 {
 	cout << "Enter your name:" << endl;//the player write the name

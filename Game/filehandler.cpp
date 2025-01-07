@@ -2,16 +2,8 @@
 #include <iostream>
 #include <sstream>
 #include "suspect.h" 
-#include "interrogate.h"
-#include "findclues.h"
-#include "clue.h"
 #include <string>
 #include <vector>
-
-Clue clue;
-Score scrr;
-
-//FileHandler::FileHandler() {}
 
 //method for using a file about suspects' behavior during interrogation
 void FileHandler::suspectBehaviour() {
@@ -48,7 +40,7 @@ void FileHandler::suspectsInfo() {
             getline(ss, relation);    // read the variable "relation"
 
             Suspect suspect(name,age,relation); //create an object with the read data
-            suspect.print(); //print the information about the suspects
+            suspect.display(); //print the information about the suspects
         }
         file.close(); //close the file
     }
@@ -98,6 +90,7 @@ void FileHandler::getSuspectResponse(const string& fileName, int questionNumber)
     file.close();  // close file
 }
 
+//method that uses files for the camera list
 void FileHandler::roomList(){
 
     string fileName = "rooms.txt";
@@ -115,6 +108,7 @@ void FileHandler::roomList(){
     file.close();
 }
 
+//method that uses files for the clue list
 void FileHandler::clueList(const string& roomsFile, const string& cluesFile, int roomNumber) {
     ifstream rooms(roomsFile);  
     ifstream clues(cluesFile);  

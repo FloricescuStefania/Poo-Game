@@ -1,12 +1,14 @@
 ﻿#include "score.h"
-#include "iostream"
 #include "game.h"
-#include "player.h"
+#include <iostream>
+using namespace std;
 
 Game scoregame;
 
+//default contructor
 Score::Score() : score(0) {}
 
+//method to check if the player can guess the murderer based on their score
 void Score::guessScore() const {
 	if (score >= 100) {
 		cout << "You can guess who is the murderer!" << endl;
@@ -17,10 +19,12 @@ void Score::guessScore() const {
 	scoregame.start();
 }
 
+//method to get the current score
 int Score::getScore() const {
     return score;
 }
 
+//method to set the score to a new value
 void Score::setScore(int newscore) {
 	if (newscore >= 0) {
 		score = newscore;
@@ -29,10 +33,13 @@ void Score::setScore(int newscore) {
 		cout << "Invalid score. Score cannot be negative." << endl;
 	}
 }
+
+//method to add 10 points to the current score
 void Score::addScore() {
 	score += 10;
 }
 
+//method to reduce 10 points to the current score
 void Score::reduceScore() {
 	if (score > 0) {
 		score -= 10;
@@ -42,6 +49,7 @@ void Score::reduceScore() {
 	}
 }
 
+//method to display the current score
 void Score::displayScore() const {
 	cout << "The current score is: " << score <<endl;
 }

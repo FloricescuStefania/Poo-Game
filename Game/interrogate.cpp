@@ -1,18 +1,14 @@
-﻿#include <string>
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 using namespace std;
 #include "interrogate.h"
-#include "suspect.h"
 #include "game.h"
 #include "filehandler.h"
-#include "score.h"
 
 FileHandler file;
-Score askscore;
 Game trygame;
 
-
+//method for selecting and displaying suspects
 void Interrogate::begin() {
 
     cout << "\nWho do you want to interrogate?(1-3):\n" << endl;
@@ -29,6 +25,7 @@ void Interrogate::begin() {
     }
 }
 
+//method for selecting suspects for interrogation
 void Interrogate::interrogate()
 {
     begin();
@@ -60,6 +57,7 @@ void Interrogate::interrogate()
     
 }
 
+//method for choosing to do something else
 void Interrogate::trySomethingElse() {
     cout << "\nWhat do you want to do now?(1-2):\n" << endl;
     cout << "1.Ask something else" << endl;
@@ -70,10 +68,10 @@ void Interrogate::trySomethingElse() {
 
     switch (another) {
     case 1:
-        interrogate();
+        interrogate();    //interrogate another suspect
         break;
     case 2:
-        trygame.start();
+        trygame.start();  //go to the start
         break;
     default:
         cout << "Invalid choice.Try again:\n" << endl;
