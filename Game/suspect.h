@@ -1,8 +1,6 @@
 #pragma once
 
 #include <string>
-#include <iostream>
-#include "player.h"
 using namespace std;
 
 class Suspect
@@ -16,6 +14,7 @@ public:
     //Suspect();
     Suspect(string name, int age, string relation);
     void print() const; 
+
 
 };
 

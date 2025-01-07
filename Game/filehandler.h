@@ -1,18 +1,20 @@
 #pragma once
+
 #include <fstream>
-#include <string>
-#include <vector>
+#include "score.h"
 using namespace std;
 
-class FileHandler {
+ class FileHandler {
 private:
 	ifstream file;
 	string fileName;
+
 public:
-	FileHandler();
+	//FileHandler();
 	void suspectBehaviour();
 	void questionFile();
-	// void roomList();
-	void suspects_info();
+    void roomList();
+	void suspectsInfo();
 	void getSuspectResponse(const string& fileName, int questionNumber);
+	void clueList(const string& roomsFile, const string& cluesFile, int roomNumber);
 };

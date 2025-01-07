@@ -1,31 +1,37 @@
 ﻿#include "filehandler.h"
-#include <sstream>
 #include <iostream>
+#include <sstream>
 #include "suspect.h" 
+#include "interrogate.h"
+#include "findclues.h"
+#include "clue.h"
+#include <string>
 #include <vector>
-#include <fstream>
-#include "round1.h"
 
-FileHandler::FileHandler() {}
+Clue clue;
+Score scrr;
+
+//FileHandler::FileHandler() {}
 
 //method for using a file about suspects' behavior during interrogation
 void FileHandler::suspectBehaviour() {
-    string fileName = "suspect_behaviour.txt"; //file name
-    ifstream file(fileName); //opens the file and reads data from it 
-    string line; //each line of the file
-    if(!file.is_open()) {
-        cout << "Error:The file " << fileName << " was not found!" << endl; //if can't open the file
-        return;
-    }
-    while (getline(file, line)) { //read and display each valid line
-        cout << line << endl;
-    }
-    file.close(); //close the file
+        
+        string fileName = "suspect_behaviour.txt"; //file name
+        ifstream file(fileName); //opens the file and reads data from it 
 
+        string line; //each line of the file
+        if (!file.is_open()) {
+            cout << "Error:The file " << fileName << " was not found!" << endl; //if can't open the file
+            return;
+        }
+        while (getline(file, line)) { //read and display each valid line
+            cout << line << endl;
+        }
+        file.close(); //close the file
 }
 
 //method for using a file about suspects' information 
-void FileHandler::suspects_info() {
+void FileHandler::suspectsInfo() {
     string fileName = "suspect_info.txt"; //file name
     ifstream file(fileName); //opens the file and reads data from it
     string line;             //each line of the file
@@ -41,8 +47,8 @@ void FileHandler::suspects_info() {
             ss.ignore(1, ',');        // ignore the comma
             getline(ss, relation);    // read the variable "relation"
 
-            Suspect suspect(name, age, relation); //create an object with the read data
-            suspect.print();  // Afișează informațiile despre suspect
+            Suspect suspect(name,age,relation); //create an object with the read data
+            suspect.print(); //print the information about the suspects
         }
         file.close(); //close the file
     }
@@ -92,13 +98,13 @@ void FileHandler::getSuspectResponse(const string& fileName, int questionNumber)
     file.close();  // close file
 }
 
-/*
 void FileHandler::roomList(){
+
     string fileName = "rooms.txt";
     ifstream file(fileName);
 
     if (!file.is_open()) {
-        cout << "Eroare:The file " << fileName << " was not found." << endl;
+        cout << "Error: The file " << fileName << " was not found." << endl;
         return;
     }
     string line;
@@ -107,4 +113,39 @@ void FileHandler::roomList(){
     }
 
     file.close();
-}*/
+}
+
+void FileHandler::clueList(const string& roomsFile, const string& cluesFile, int roomNumber) {
+    ifstream rooms(roomsFile);  
+    ifstream clues(cluesFile);  
+
+    if (!rooms.is_open()) {
+        cout << "Error: The file " << roomsFile << " was not found." << endl;
+        return;
+    }
+    if (!clues.is_open()) {
+        cout << "Error: The file " << cluesFile << " was not found." << endl;
+        return;
+    }
+
+    string roomLine;
+    string clueLine;
+    int currentRoom = 1; 
+    bool clueFound = false;
+
+    while (getline(rooms, roomLine) && getline(clues, clueLine)) {
+        if (currentRoom == roomNumber) {
+            cout << "Clue: " << clueLine << endl;
+            clueFound = true;
+            break;
+        }
+        currentRoom++;
+    }
+
+    if (!clueFound) {
+        cout << "No clue found for this room!" << endl;
+    }
+
+    rooms.close();
+    clues.close();
+}

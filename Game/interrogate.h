@@ -1,6 +1,7 @@
 #pragma once
+#include <string>
 
-class Round1 {
+class Interrogate {
 
 private:
 	string selectedSuspectFile;
@@ -8,6 +9,5 @@ private:
 public:
 	void begin();
 	void interrogate();
-	void riskyChoice();
 	void trySomethingElse();
  };

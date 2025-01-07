@@ -30,13 +30,19 @@
     <ClCompile Include="game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="round1.cpp">
+    <ClCompile Include="interrogate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="inspecthouse.cpp">
+    <ClCompile Include="findclues.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="filehandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="score.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,13 +53,19 @@
     <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="round1.h">
+    <ClInclude Include="interrogate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inspecthouse.h">
+    <ClInclude Include="findclues.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="filehandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="score.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,5 +77,6 @@
     <Text Include="suspect1-responses.txt" />
     <Text Include="suspect2-responses.txt" />
     <Text Include="suspect3-responses.txt" />
+    <Text Include="clue.txt" />
   </ItemGroup>
 </Project>

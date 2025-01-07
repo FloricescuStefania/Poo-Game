@@ -1,17 +1,13 @@
 #include "suspect.h"
-#include "filehandler.h"
+#include <iostream>
 
-//Suspect::Suspect() {}
+//Suspect::Suspect(){};
 
-Suspect::Suspect(string name, int age, string relation) //constructor for suspects
-{
-    this->name = name;
-    this->age = age;
-    this->relation = relation;
-}
+//Suspect::Suspect() { name = "default"; age = 0; relation = "default"; }
 
-void Suspect::print() const //method to display information about suspects
+Suspect::Suspect(string name, int age, string relation) : name(name), age(age), relation(relation) {}
+
+void Suspect::print()const //method to display information about suspects
 {
     cout <<"Name: " << name << " , " << "Age: " << age << " , " << "Relation with the victim: " << relation << endl;
 }
-

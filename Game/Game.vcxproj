@@ -127,23 +127,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="clue.cpp" />
     <ClCompile Include="filehandler.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="player.cpp" />
-    <ClCompile Include="round1.cpp" />
-    <ClCompile Include="inspecthouse.cpp" />
+    <ClCompile Include="interrogate.cpp" />
+    <ClCompile Include="findclues.cpp" />
+    <ClCompile Include="score.cpp" />
     <ClCompile Include="suspect.cpp" />
     <ClCompile Include="suspect.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clue.h" />
     <ClInclude Include="filehandler.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="player.h" />
-    <ClInclude Include="round1.h" />
-    <ClInclude Include="inspecthouse.h" />
+    <ClInclude Include="interrogate.h" />
+    <ClInclude Include="findclues.h" />
+    <ClInclude Include="score.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="clue.txt" />
     <Text Include="questions.txt" />
     <Text Include="rooms.txt" />
     <Text Include="suspect1-responses.txt" />
