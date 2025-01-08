@@ -10,7 +10,7 @@ Score::Score() : score(0) {}
 
 //method to check if the player can guess the murderer based on their score
 void Score::guessScore() const {
-	if (score >= 100) {
+	if (score >= 50) {
 		cout << "You can guess who is the murderer!" << endl;
 		scoregame.guess();
 	}
